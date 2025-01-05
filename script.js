@@ -77,3 +77,10 @@ function restartGame() {
 // Add event listeners for the buttons
 submit.addEventListener("click", checkGuess);
 restart.addEventListener("click", restartGame);
+
+// Add event listener for the input field to listen for the Enter key
+guessInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        checkGuess(event);
+    }
+});
