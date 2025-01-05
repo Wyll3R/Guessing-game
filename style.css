@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px auto;
+    background-color: #f0f0f0; /* Subtle background color */
+    padding: 20px; /* Add padding for better spacing */
+}
+.gameBody {
+    margin: auto;
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+input, button {
+    padding: 10px;
+    margin: 5px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #45a049;
+}
+#result {
+    font-size: 16px;
+    color: red;
+}
