@@ -30,19 +30,20 @@ function checkGuess(event) {
     // Check if the guess is correct
     if (Number(guess) === randomNumber) {
         const attemptsUsed = INITIAL_ATTEMPTS - attempts;
-        result.innerHTML = `Congratulations! You guessed the right number! You have used ${attemptsUsed} out of ${INITIAL_ATTEMPTS} attempts.`;
+        result.innerHTML = `Congratulations! You guessed the right number! You have used ${attemptsUsed + 1} out of ${INITIAL_ATTEMPTS} attempts.`;
         disableInput(); // Disable further input
         submit.style.display = "none"; // Hide the submit button
         restart.style.display = "inline"; // Show the restart button
         return; // Exit the function after winning
     } else if (guess < randomNumber) { // Check if the guess is too low
-        result.innerHTML = "Too low! Try a higher number!";
+        result.innerHTML = `Number ${guessInput.value} is too low! Try a higher number!`;
     } else if (guess > randomNumber) { // Check if the guess is too high
-        result.innerHTML = "Too high! Try a lower number!";
+        result.innerHTML = `Number ${guessInput.value} is too high! Try a lower number!`;
     }
 
     // Decrement the number of attempts
     attempts--;
+    guessInput.value = ""; // Clear the input field after the user has guessed the number
 
     // Provide feedback on the number of attempts left
     if (attempts > 0) {
